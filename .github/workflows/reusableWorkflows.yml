@@ -14,7 +14,7 @@ jobs:
         run: echo Hello, world!
 
   docker:
-    uses: sark1/GithubActions-Workflow/blob/main/.github/workflows/buildAndPublishDockerImage.yml@main
+    uses: sark1/GithubActions-Workflow/.github/workflows/buildAndPublishDockerImage.yml@main
     with:
       image_name: my-awesome-app
       tag: $GITHUB_RUN_NUMBER
