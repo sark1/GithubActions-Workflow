@@ -12,5 +12,5 @@ jobs:
              'Install-Module powershell-yaml -force'
              'Import-Module powershell-yaml -Force'
              'invoke-webrequest -Uri "https://github.com/sark1/GithubActions-Workflow/blob/main/Dockerfile" -OutFile "abcd.txt"'
-             'Write-Host "Artifact Verified !!!"
+             'Write-Host "Artifact Verified !!!"'
         
