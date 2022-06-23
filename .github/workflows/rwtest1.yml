@@ -1,0 +1,12 @@
+name : rwtest1
+on:
+  workflow_dispatch:
+jobs:
+  rwjob1:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+   rwjob2:
+    uses: sark1/GithubActions-Workflow/.github/workflows/test1.yml@main
+    with: 
+      url: "https://github.com/sark1/GithubActions-Workflow/blob/main/Dockerfile"
