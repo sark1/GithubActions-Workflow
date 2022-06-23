@@ -10,4 +10,4 @@ jobs:
         shell: pwsh
         run: |
              'invoke-webrequest -Uri "https://github.com/sark1/GithubActions-Workflow/blob/main/Dockerfile" -OutFile "abcd.txt"'
-             'Write-Host "Artifact Verified !!!"'
+             'Write-Host abcd.txt'
