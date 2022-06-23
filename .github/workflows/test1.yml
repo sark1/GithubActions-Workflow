@@ -1,0 +1,12 @@
+name: test1
+on:
+  workflow-dispatch:
+jobs:
+  get_artifact:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: action/checkout@v3
+      - name: 'powershell'
+        shell: pwsh
+        run: 'invoke-webrequest -Uri "https://github.com/sark1/GithubActions-Workflow/blob/main/Dockerfile" -OutFile "abcd.txt"'
+        run: 'Write-Host "Artifact Verified !!!"
