@@ -9,8 +9,8 @@ jobs:
       - name: 'powershell'
         shell: pwsh
         run: |
-             'Install-Module powershell-yaml -force'
-             'Import-Module powershell-yaml -Force'
-             'invoke-webrequest -Uri "https://github.com/sark1/GithubActions-Workflow/blob/main/Dockerfile" -OutFile "abcd.txt"'
-             'Write-Host "Artifact Verified !!!"'
+              Install-Module powershell-yaml -force
+              Import-Module powershell-yaml -Force
+              invoke-webrequest -Uri "https://github.com/sark1/GithubActions-Workflow/blob/main/Dockerfile" -OutFile "abcd.txt"
+              Write-Host "Artifact Verified !!!"
         
