@@ -12,4 +12,4 @@ jobs:
   rwjob2:
     uses: sark1/GithubActions-Workflow/.github/workflows/test1.yml@main
     with: 
-      url: "https://github.com/sark1/GithubActions-Workflow/blob/main/Dockerfile"
+      url1: "https://github.com/sark1/GithubActions-Workflow/blob/main/Dockerfile"
