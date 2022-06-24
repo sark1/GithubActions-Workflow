@@ -18,7 +18,11 @@ jobs:
               Import-Module powershell-yaml -Force
               invoke-webrequest -Uri ${{inputs.url1}} -OutFile "abcd.txt"
               Write-Host "Artifact Verified !!!"
+      - name: 'finding path'
+        run: readline -f abcd.txt
       - name: 'upload'
-        shell: sh
-        run: cat 'abcd.txt'
+        uses: actions/upload-artifact@v2
+        with: 
+          name: 'abcd.txt'
+          path: 
         
