@@ -24,5 +24,5 @@ jobs:
         uses: actions/upload-artifact@v2
         with: 
           name: 'abcd.txt'
-          path: 
+          path: /home/runner/work/GithubActions-Workflow/GithubActions-Workflow/abcd.txt
         
