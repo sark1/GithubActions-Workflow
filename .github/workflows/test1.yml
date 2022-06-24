@@ -16,10 +16,10 @@ jobs:
         run: |
               Install-Module powershell-yaml -force
               Import-Module powershell-yaml -Force
-              invoke-webrequest -Uri ${{inputs.url1}} -OutFile "abcd.txt"
+              invoke-webrequest -Uri ${{inputs.url1}} -OutFile "abcd"
               Write-Host "Artifact Verified !!!"
       - name: 'finding path'
-        run: readlink -f abcd.txt
+        run: readlink -f abcd
       - name: 'upload'
         uses: actions/upload-artifact@v2
         with: 
