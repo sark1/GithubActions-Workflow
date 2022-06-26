@@ -19,7 +19,7 @@ jobs:
               invoke-webrequest -Uri ${{inputs.url1}} -OutFile "abcd.html"
               Write-Host "Artifact Verified !!!"
       - name: 'finding path'
-        run: readlink -f abcd
+        run: readlink -f abcd.html
       - name: 'upload'
         uses: actions/upload-artifact@v2
         with: 
