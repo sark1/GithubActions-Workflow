@@ -18,10 +18,10 @@ jobs:
           java-version: '11'
           distribution: 'adopt'
       - name: pull the Docker image
-        run: docker pull ${{ inputs.dockerImage }}
+        run: docker pull ${{ inputs.image_name }}
       - name: docker run
         run: |
-           docker container run ${{ inputs.dockerImage }}
+           docker container run ${{ inputs.image_name }}
       - name: Install dependencies
         run: echo "npm run build"
       - name: Run test
@@ -34,7 +34,7 @@ jobs:
       - name: login
         run: echo "login success"
       - name: tag
-        run:  docker tag ${{ inputs.dockerImage }} subhajit1/${{ inputs.dockerImage }}:latest
+        run:  docker tag ${{ inputs.image_name }} subhajit1/${{ inputs.image_name }}:latest
       - name: push
-        run: docker push subhajit1/${{ inputs.dockerImage }}:latest
+        run: docker push subhajit1/${{ inputs.image_name }}:latest
 
