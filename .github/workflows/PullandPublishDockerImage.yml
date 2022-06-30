@@ -34,7 +34,7 @@ jobs:
       - name: login
         run: echo "login success"
       - name: tag
-        run:  docker tag ${{ inputs.dockerImage }} sindhu530/${{ inputs.dockerImage }}:latest
+        run:  docker tag ${{ inputs.dockerImage }} subhajit1/${{ inputs.dockerImage }}:latest
       - name: push
-        run: docker push sindhu530/${{ inputs.dockerImage }}:latest
+        run: docker push subhajit1/${{ inputs.dockerImage }}:latest
 
