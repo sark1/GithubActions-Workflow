@@ -16,7 +16,15 @@ jobs:
   docker:
     uses: sark1/GithubActions-Workflow/.github/workflows/PullandPublishDockerImage.yml@main
     with:
-      image_name: ubuntu
+      image_name: azureawsgcsdk
+      tag: $GITHUB_RUN_NUMBER
+    secrets:
+      registry_username: ${{secrets.REGISTRY_USERNAME}}
+      registry_password: ${{secrets.REGISTRY_PASSWORD}}
+  java:
+    uses: sark1/GithubActions-Workflow/.github/workflows/buildAndPublishDockerImage.yml@main
+    with:
+      image_name: ubuntu:20.04
       tag: $GITHUB_RUN_NUMBER
     secrets:
       registry_username: ${{secrets.REGISTRY_USERNAME}}
