@@ -16,7 +16,7 @@ jobs:
   docker:
     uses: sark1/GithubActions-Workflow/.github/workflows/PullandPublishDockerImage.yml@main
     with:
-      image_name: ubuntu:20.04
+      image_name: ubuntu
       tag: $GITHUB_RUN_NUMBER
     secrets:
       registry_username: ${{secrets.REGISTRY_USERNAME}}
