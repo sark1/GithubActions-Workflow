@@ -34,7 +34,7 @@ jobs:
         shell: sh
         run: |
           docker pull ${{inputs.image_name}}
-          docker build azureawsgcsdk
+          docker build -t ${{inputs.image_name}} .
           docker push ${{inputs.image_name}}
           
           
